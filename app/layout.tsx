@@ -204,7 +204,7 @@ export default function RootLayout({
         name: "Wer steckt hinter ki-unternehmensanalyse.de?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Die KI Unternehmensanalyse wird von der track by track GmbH (famefact) betrieben. Geschäftsführer Tobias Gossmann berät seit über 10 Jahren mittelständische Unternehmen bei der digitalen Transformation und KI-Einführung.",
+          text: "Die KI Unternehmensanalyse wird von der track by track GmbH (famefact) betrieben. Geschäftsführer Tobias Sander berät seit über 10 Jahren mittelständische Unternehmen bei der digitalen Transformation und KI-Einführung.",
         },
       },
       {

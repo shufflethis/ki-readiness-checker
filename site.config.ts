@@ -31,11 +31,11 @@ export const siteConfig = {
     ],
   },
   author: {
-    name: "Tobias Gossmann",
+    name: "Tobias Sander",
     role: "Geschäftsführer & KI-Stratege",
     company: "famefact | track by track GmbH",
     linkedin: "https://www.linkedin.com/in/tobias-famefact/",
-    bio: "Tobias Gossmann ist Geschäftsführer der track by track GmbH und Gründer von famefact — einer der führenden Agenturen für KI-gestützte Unternehmensprozesse in Deutschland. Mit über 10 Jahren Erfahrung in digitaler Transformation berät er mittelständische Unternehmen, Konzerne und öffentliche Einrichtungen bei der strategischen Einführung von Künstlicher Intelligenz. Als Entwickler der KI Unternehmensanalyse auf ki-unternehmensanalyse.de verbindet er praxisnahe KI-Beratung mit datengetriebener Potenzialanalyse.",
+    bio: "Tobias Sander ist Geschäftsführer der track by track GmbH und Gründer von famefact — einer der führenden Agenturen für KI-gestützte Unternehmensprozesse in Deutschland. Mit über 10 Jahren Erfahrung in digitaler Transformation berät er mittelständische Unternehmen, Konzerne und öffentliche Einrichtungen bei der strategischen Einführung von Künstlicher Intelligenz.",
   },
   colors: {
     primary: "#0D0D0D",
@@ -50,11 +50,11 @@ export const siteConfig = {
     country: "Deutschland",
     phone: "+49 30 403 6654 30",
     email: "info@trackbytrack.de",
-    managingDirector: "Gorden Allgemein",
+    managingDirector: "Tobias Sander",
     registerCourt: "Amtsgericht Berlin-Charlottenburg",
     registerNumber: "HRB XXXXX",
     vatId: "DE XXXXXXXXX",
-    responsibleContent: "Gorden Allgemein",
+    responsibleContent: "Tobias Sander",
   },
   scoring: {
     maturityLevels: [
