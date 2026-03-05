@@ -12,7 +12,7 @@ const fadeUp: Variants = {
     visible: (i: number) => ({
         opacity: 1,
         y: 0,
-        transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" },
+        transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" as const },
     }),
 };
 
@@ -41,7 +41,7 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                         className="mt-6 font-headline text-4xl font-bold leading-tight text-brand-black sm:text-5xl lg:text-6xl"
                         initial="hidden" animate="visible" custom={1} variants={fadeUp}
                     >
-                        KI für {siteConfig.nicheLabel}
+                        KI Unternehmensanalyse
                         <br />
                         <span className="text-brand-iris">Kostenloser Readiness Check</span>
                     </motion.h1>
@@ -81,7 +81,7 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                     initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.5 }}
                 >
-                    Die 5 KI-Reifegradstufen im Mittelstand
+                    Die 5 KI-Reifegradstufen der Unternehmensanalyse
                 </motion.h2>
                 <div className="grid gap-3 sm:grid-cols-5">
                     {levels.map((level, i) => (
@@ -106,7 +106,7 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
             </section>
 
             {/* ═══════════════════════════════════════════════
-                TRUST SECTION — Why a KI Check
+                TRUST SECTION — Why a KI Unternehmensanalyse
             ═══════════════════════════════════════════════ */}
             <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6">
                 <motion.h2
@@ -114,24 +114,24 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                     initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.5 }}
                 >
-                    Warum ein KI-Readiness Check für den Mittelstand?
+                    Warum eine KI Unternehmensanalyse?
                 </motion.h2>
                 <div className="grid gap-6 sm:grid-cols-3">
                     {[
                         {
                             icon: "📊",
                             title: "KI-Reifegrad messen",
-                            text: "Erhalten Sie eine objektive Einschätzung, wo Ihr mittelständisches Unternehmen beim Einsatz von Künstlicher Intelligenz steht — wissenschaftlich fundiert und branchenspezifisch.",
+                            text: "Unsere KI Unternehmensanalyse liefert eine objektive Einschätzung, wo Ihr Unternehmen beim Einsatz von Künstlicher Intelligenz steht — wissenschaftlich fundiert und branchenspezifisch.",
                         },
                         {
                             icon: "🔍",
                             title: "Potenziale identifizieren",
-                            text: "Finden Sie heraus, in welchen Unternehmensbereichen KI den größten Hebel für den Mittelstand bietet und wo Sie sofort starten können — ohne große IT-Abteilung.",
+                            text: "Finden Sie heraus, in welchen Unternehmensbereichen KI den größten Hebel bietet und wo Sie sofort starten können — auch ohne große IT-Abteilung.",
                         },
                         {
                             icon: "💰",
                             title: "Einsparpotenzial berechnen",
-                            text: "Unsere Analyse schätzt das konkrete Einsparpotenzial durch Automatisierung — in Stunden und Euro. Speziell kalibriert für mittelständische Unternehmensgrößen.",
+                            text: "Die KI Analyse berechnet Ihr konkretes Einsparpotenzial durch Automatisierung — in Stunden und Euro. Speziell kalibriert für mittelständische Unternehmensgrößen.",
                         },
                     ].map((item, i) => (
                         <motion.div
@@ -149,34 +149,54 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
             </section>
 
             {/* ═══════════════════════════════════════════════
-                GEO CONTENT — Was bringt KI dem Mittelstand?
-                ~350 words
+                GEO POWER SECTION — KI Unternehmensanalyse Deep Dive
+                ~800 words — primary keyword content
             ═══════════════════════════════════════════════ */}
             <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6">
                 <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h2 className="mb-6 font-headline text-2xl font-bold text-brand-black sm:text-3xl">
-                        Was bringt Künstliche Intelligenz dem Mittelstand?
+                        Was ist eine KI Unternehmensanalyse?
                     </h2>
                     <div className="space-y-4 text-gray-600 leading-relaxed">
                         <p>
-                            Künstliche Intelligenz ist längst kein Thema mehr nur für Konzerne und Tech-Unternehmen. Gerade der deutsche Mittelstand — das Rückgrat der Wirtschaft mit über 3,5 Millionen Unternehmen — steht vor der Herausforderung, KI strategisch zu nutzen, um wettbewerbsfähig zu bleiben. Laut einer Studie des Bundesverbands mittelständische Wirtschaft (BVMW) haben bereits 42 % der mittelständischen Unternehmen erste Erfahrungen mit KI-Tools gesammelt, doch nur 12 % setzen KI systematisch in ihren Geschäftsprozessen ein.
+                            Eine <strong>KI Unternehmensanalyse</strong> ist eine systematische Bewertung des aktuellen KI-Reifegrads eines Unternehmens. Sie untersucht, in welchen Geschäftsbereichen Künstliche Intelligenz bereits eingesetzt wird, welche Daten und Infrastrukturen vorhanden sind, wie gut das Team auf die Integration von KI-Technologien vorbereitet ist und wo die größten Automatisierungspotenziale liegen. Das Ziel: eine fundierte Standortbestimmung als Grundlage für strategische Entscheidungen zur digitalen Transformation.
                         </p>
                         <p>
-                            Für mittelständische Unternehmen liegen die größten Potenziale in der Automatisierung wiederkehrender Aufgaben: Kundenkommunikation per Chatbot oder E-Mail-Automatisierung, datengetriebene Entscheidungsfindung im Vertrieb, vorausschauende Wartung in der Produktion und die Optimierung von Marketing-Kampagnen durch KI-gestützte Analysen. Unternehmen mit 50 bis 500 Mitarbeitenden berichten regelmäßig von 15 bis 30 Prozent Effizienzsteigerung nach der Einführung erster KI-Werkzeuge.
+                            Im Unterschied zu allgemeinen Digitalisierungs-Assessments fokussiert sich die KI Unternehmensanalyse gezielt auf den Einsatz von Künstlicher Intelligenz — von einfachen Chatbots und E-Mail-Automatisierungen bis hin zu komplexen Machine-Learning-Anwendungen in Produktion, Vertrieb und Controlling. Dabei werden sechs Kernbereiche systematisch bewertet: der aktuelle KI-Einsatz und die strategische Verankerung, der Grad der Prozessautomatisierung, die Daten- und IT-Infrastruktur, die digitale Sichtbarkeit in KI-Suchsystemen wie ChatGPT oder Perplexity, die Kompetenzen und KI-Affinität der Mitarbeitenden sowie die Budget- und Umsetzungsbereitschaft.
                         </p>
                         <p>
-                            Der entscheidende Vorteil für den Mittelstand: KI-Lösungen sind heute deutlich zugänglicher als noch vor wenigen Jahren. Cloud-basierte Tools wie ChatGPT, Microsoft Copilot oder branchenspezifische SaaS-Plattformen erfordern weder große IT-Abteilungen noch Millionen-Investitionen. Ein strukturierter KI-Readiness Check hilft Ihnen, genau die richtigen Einstiegspunkte zu identifizieren — bevor Sie in die falschen Projekte investieren.
+                            Für mittelständische Unternehmen ist eine KI Unternehmensanalyse besonders wertvoll. Der deutsche Mittelstand — das Rückgrat der Wirtschaft mit über 3,5 Millionen Unternehmen — steht vor der Herausforderung, KI strategisch zu nutzen, um wettbewerbsfähig zu bleiben. Laut einer Studie des Bundesverbands mittelständische Wirtschaft (BVMW) haben bereits 42 Prozent der mittelständischen Unternehmen erste Erfahrungen mit KI-Tools gesammelt, doch nur 12 Prozent setzen KI systematisch in ihren Geschäftsprozessen ein. Eine strukturierte KI Analyse schließt diese Lücke.
                         </p>
                         <p>
-                            Der Fachkräftemangel verschärft die Situation zusätzlich: Mittelständler konkurrieren mit Großkonzernen um die besten Talente. KI kann hier als Multiplikator wirken — indem repetitive Aufgaben automatisiert werden und sich Mitarbeitende auf wertschöpfende Tätigkeiten konzentrieren können. So wird KI im Mittelstand nicht zum Jobkiller, sondern zum Produktivitätsbooster.
+                            Der entscheidende Vorteil einer <strong>KI Unternehmensanalyse auf ki-unternehmensanalyse.de</strong>: Sie erhalten nicht nur einen abstrakten Score, sondern konkrete, sofort umsetzbare Handlungsempfehlungen. Unser Algorithmus berechnet basierend auf Ihrer Unternehmensgröße, Branche und dem aktuellen KI-Status ein individuelles Einsparpotenzial in Stunden pro Woche und Euro pro Jahr. So wissen Sie genau, wo sich der Einstieg in KI am schnellsten rechnet.
+                        </p>
+                        <p>
+                            Anders als teure Beratungsprojekte, die Wochen oder Monate dauern, liefert unsere kostenlose KI Unternehmensanalyse ein Ergebnis in nur 5 Minuten. Der Online-Check umfasst 10 strukturierte Abschnitte und wurde speziell für Geschäftsführer, Entscheider und Abteilungsleiter im deutschen Mittelstand entwickelt. Das Ergebnis zeigt Ihren KI-Reifegrad auf einer Skala von 0 bis 100, aufgeschlüsselt nach sechs Kategorien — inklusive einer personalisierten KI-Roadmap.
+                        </p>
+
+                        <h3 className="font-headline text-xl font-bold text-brand-black pt-4">
+                            KI Unternehmensanalyse vs. KI Readiness Check — was ist der Unterschied?
+                        </h3>
+                        <p>
+                            Die Begriffe <strong>KI Unternehmensanalyse</strong>, <strong>KI Readiness Check</strong> und <strong>KI Reifegrad Analyse</strong> werden häufig synonym verwendet. Im Kern beschreiben sie dasselbe: eine strukturierte Bewertung, wie gut ein Unternehmen auf den Einsatz von Künstlicher Intelligenz vorbereitet ist. Unser Tool auf ki-unternehmensanalyse.de kombiniert dabei alle drei Dimensionen: Es analysiert den IST-Zustand (Readiness), bewertet den Reifegrad (Maturity Score) und leitet daraus konkrete Handlungsempfehlungen ab (Analyse).
+                        </p>
+                        <p>
+                            Die <strong>KI Potenzialanalyse</strong> geht einen Schritt weiter: Sie quantifiziert das Einsparpotenzial durch KI-gestützte Automatisierung und zeigt, welche Prozesse den höchsten ROI versprechen. Wer also nach &bdquo;KI Analyse Unternehmen&ldquo;, &bdquo;KI Reifegrad Analyse&ldquo; oder &bdquo;KI Bedarfsanalyse Unternehmen&ldquo; sucht, findet in unserem kostenlosen Tool das ideale Instrument für den Einstieg.
+                        </p>
+
+                        <h3 className="font-headline text-xl font-bold text-brand-black pt-4">
+                            Für wen eignet sich die KI Unternehmensanalyse?
+                        </h3>
+                        <p>
+                            Unsere KI Unternehmensanalyse richtet sich an Unternehmen jeder Größe und Branche im deutschsprachigen Raum. Besonders profitieren Geschäftsführer und IT-Verantwortliche in Unternehmen mit 10 bis 1.000 Mitarbeitenden, die wissen möchten, ob und wo KI einen Mehrwert schaffen kann. Der Check eignet sich sowohl für Unternehmen, die noch gar keine KI einsetzen, als auch für solche, die bestehende Ansätze systematisch bewerten und skalieren möchten. Branchen wie Produktion, Handel, Dienstleistung, Gesundheitswesen, Finanzsektor und IT profitieren besonders stark von einer datengetriebenen KI-Standortbestimmung.
                         </p>
                     </div>
                 </motion.div>
             </section>
 
             {/* ═══════════════════════════════════════════════
-                HOW-TO SECTION — So funktioniert's
+                HOW-TO SECTION — So funktioniert die KI Unternehmensanalyse
                 ~300 words
             ═══════════════════════════════════════════════ */}
             <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6">
@@ -185,7 +205,7 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                     initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.5 }}
                 >
-                    So funktioniert der KI-Readiness Check
+                    So funktioniert die KI Unternehmensanalyse
                 </motion.h2>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     {howToSteps.map((step, i) => (
@@ -211,7 +231,7 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                         onClick={onStartCheck}
                         className="inline-flex items-center gap-2 rounded-xl bg-brand-green px-8 py-4 text-lg font-semibold text-brand-black shadow-md transition-all hover:bg-brand-green-hover hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
                     >
-                        Jetzt kostenlos starten
+                        Jetzt kostenlos analysieren
                         <span className="text-xl">→</span>
                     </button>
                 </div>
@@ -225,7 +245,7 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                 <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h2 className="mb-8 text-center font-headline text-2xl font-bold text-brand-black sm:text-3xl">
-                        6 Dimensionen der KI-Readiness im Mittelstand
+                        6 Dimensionen der KI Unternehmensanalyse
                     </h2>
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         {[
@@ -247,7 +267,7 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                             {
                                 icon: "📡",
                                 title: "Marketing & Sichtbarkeit",
-                                text: "Wird Ihr Unternehmen in KI-Suchsystemen wie ChatGPT oder Perplexity gefunden? Generative Engine Optimization (GEO) wird für den Mittelstand zum entscheidenden Wettbewerbsfaktor — wer hier früh optimiert, gewinnt Sichtbarkeit, die klassisches SEO allein nicht mehr liefern kann.",
+                                text: "Wird Ihr Unternehmen in KI-Suchsystemen wie ChatGPT oder Perplexity gefunden? Generative Engine Optimization (GEO) wird zum entscheidenden Wettbewerbsfaktor — wer hier früh optimiert, gewinnt Sichtbarkeit, die klassisches SEO allein nicht mehr liefern kann.",
                             },
                             {
                                 icon: "🎓",
@@ -283,14 +303,14 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                 <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h2 className="mb-8 text-center font-headline text-2xl font-bold text-brand-black sm:text-3xl">
-                        KI im Mittelstand: Zahlen & Fakten
+                        KI Unternehmensanalyse: Zahlen & Fakten
                     </h2>
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                         {[
                             { value: "42 %", label: "der Mittelständler haben erste KI-Erfahrungen", source: "BVMW 2024" },
                             { value: "12 %", label: "setzen KI systematisch in Prozessen ein", source: "Bitkom 2024" },
                             { value: "30 %", label: "Effizienzgewinn durch KI-Automatisierung", source: "McKinsey SME Report" },
-                            { value: "5 Min.", label: "für Ihren persönlichen KI-Readiness Score", source: "" },
+                            { value: "5 Min.", label: "für Ihre persönliche KI Unternehmensanalyse", source: "" },
                         ].map((stat, i) => (
                             <motion.div
                                 key={i}
@@ -306,18 +326,42 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                     </div>
                     <div className="mt-6 space-y-4 text-gray-600 leading-relaxed">
                         <p>
-                            Deutschland ist Europas größte Volkswirtschaft — und der Mittelstand ihr Motor. Doch bei der KI-Adoption hinken mittelständische Unternehmen den Konzernen hinterher. Während 78 % der DAX-Unternehmen bereits KI-Strategien implementiert haben, fehlt im Mittelstand häufig der strukturierte Einstieg. Die Herausforderungen sind bekannt: Fachkräftemangel, steigende Kosten und zunehmender Wettbewerbsdruck. KI kann bei all diesen Themen ein entscheidender Hebel sein — vorausgesetzt, der Einstieg wird richtig priorisiert.
+                            Deutschland ist Europas größte Volkswirtschaft — und der Mittelstand ihr Motor. Doch bei der KI-Adoption hinken mittelständische Unternehmen den Konzernen hinterher. Während 78 Prozent der DAX-Unternehmen bereits KI-Strategien implementiert haben, fehlt im Mittelstand häufig der strukturierte Einstieg. Die Herausforderungen sind bekannt: Fachkräftemangel, steigende Kosten und zunehmender Wettbewerbsdruck. Eine professionelle KI Unternehmensanalyse kann bei all diesen Themen ein entscheidender Hebel sein — vorausgesetzt, der Einstieg wird richtig priorisiert.
                         </p>
                         <p>
-                            Mittelständische Unternehmen, die ihren KI-Reifegrad systematisch analysieren, investieren gezielter und vermeiden typische Fehler bei der Einführung. Der häufigste Fehler: in teure Individuallösungen investieren, bevor die Grundlagen stimmen. Unser KI-Readiness Check zeigt Ihnen in 5 Minuten, wo Sie stehen und was der effektivste nächste Schritt ist.
+                            Unternehmen, die ihren KI-Reifegrad systematisch analysieren, investieren gezielter und vermeiden typische Fehler bei der Einführung. Der häufigste Fehler: in teure Individuallösungen investieren, bevor die Grundlagen stimmen. Unsere kostenlose KI Unternehmensanalyse auf ki-unternehmensanalyse.de zeigt Ihnen in 5 Minuten, wo Sie stehen und was der effektivste nächste Schritt ist.
                         </p>
                     </div>
                 </motion.div>
             </section>
 
             {/* ═══════════════════════════════════════════════
-                FAQ — 10 Items
-                ~500 words
+                GEO CONTENT — Was bringt KI dem Mittelstand?
+                ~350 words
+            ═══════════════════════════════════════════════ */}
+            <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6">
+                <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                    <h2 className="mb-6 font-headline text-2xl font-bold text-brand-black sm:text-3xl">
+                        Was bringt eine KI Analyse Ihrem Unternehmen konkret?
+                    </h2>
+                    <div className="space-y-4 text-gray-600 leading-relaxed">
+                        <p>
+                            Eine KI Unternehmensanalyse ist der erste Schritt, um Künstliche Intelligenz nicht als abstraktes Buzzword, sondern als konkretes Werkzeug für Ihren Geschäftserfolg zu nutzen. Für mittelständische Unternehmen liegen die größten Potenziale in der Automatisierung wiederkehrender Aufgaben: Kundenkommunikation per Chatbot oder E-Mail-Automatisierung, datengetriebene Entscheidungsfindung im Vertrieb, vorausschauende Wartung in der Produktion und die Optimierung von Marketing-Kampagnen durch KI-gestützte Analysen. Unternehmen mit 50 bis 500 Mitarbeitenden berichten regelmäßig von 15 bis 30 Prozent Effizienzsteigerung nach der Einführung erster KI-Werkzeuge.
+                        </p>
+                        <p>
+                            Der entscheidende Vorteil: KI-Lösungen sind heute deutlich zugänglicher als noch vor wenigen Jahren. Cloud-basierte Tools wie ChatGPT, Microsoft Copilot oder branchenspezifische SaaS-Plattformen erfordern weder große IT-Abteilungen noch Millionen-Investitionen. Eine strukturierte KI Unternehmensanalyse hilft Ihnen, genau die richtigen Einstiegspunkte zu identifizieren — bevor Sie in die falschen Projekte investieren.
+                        </p>
+                        <p>
+                            Der Fachkräftemangel verschärft die Situation zusätzlich: Mittelständler konkurrieren mit Großkonzernen um die besten Talente. KI kann hier als Multiplikator wirken — indem repetitive Aufgaben automatisiert werden und sich Mitarbeitende auf wertschöpfende Tätigkeiten konzentrieren können. So wird KI nicht zum Jobkiller, sondern zum Produktivitätsbooster. Die KI Unternehmensanalyse auf ki-unternehmensanalyse.de hilft Ihnen dabei, die richtigen Prioritäten zu setzen.
+                        </p>
+                    </div>
+                </motion.div>
+            </section>
+
+            {/* ═══════════════════════════════════════════════
+                FAQ — 12 Items
+                ~600 words
             ═══════════════════════════════════════════════ */}
             <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6">
                 <motion.h2
@@ -325,7 +369,7 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                     initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.5 }}
                 >
-                    Häufige Fragen zu KI für den Mittelstand
+                    Häufige Fragen zur KI Unternehmensanalyse
                 </motion.h2>
                 <div className="space-y-3">
                     {faqItems.map((faq, i) => (
@@ -358,7 +402,7 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                 >
                     <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
                         <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-green to-brand-iris text-3xl font-bold text-white">
-                            TK
+                            TG
                         </div>
                         <div>
                             <p className="text-xs font-medium uppercase tracking-wider text-brand-iris">Über den Autor</p>
@@ -393,10 +437,10 @@ export default function HeroSection({ onStartCheck }: HeroSectionProps) {
                     viewport={{ once: true }} transition={{ duration: 0.6 }}
                 >
                     <h2 className="font-headline text-2xl font-bold sm:text-3xl">
-                        Bereit, den KI-Reifegrad Ihres Unternehmens zu messen?
+                        Bereit für Ihre kostenlose KI Unternehmensanalyse?
                     </h2>
                     <p className="mx-auto mt-4 max-w-xl text-gray-400">
-                        In nur 5 Minuten erfahren Sie, wo Ihr mittelständisches Unternehmen beim Einsatz von KI steht — mit konkreten Empfehlungen und geschätztem Einsparpotenzial.
+                        In nur 5 Minuten erfahren Sie, wo Ihr Unternehmen beim Einsatz von KI steht — mit konkreten Empfehlungen, KI-Reifegrad und geschätztem Einsparpotenzial.
                     </p>
                     <button
                         onClick={onStartCheck}

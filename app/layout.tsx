@@ -41,7 +41,7 @@ export default function RootLayout({
   const webAppSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: siteConfig.siteName,
+    name: "KI Unternehmensanalyse — Kostenloser KI-Readiness Check",
     description: siteConfig.description,
     url: `https://${siteConfig.domain}`,
     applicationCategory: "BusinessApplication",
@@ -93,23 +93,25 @@ export default function RootLayout({
     },
     knowsAbout: [
       "Künstliche Intelligenz",
+      "KI Unternehmensanalyse",
       "KI Beratung",
       "Digitale Transformation",
       "KI Strategie",
       "Mittelstand",
       "KMU",
       "Prozessautomatisierung",
+      "KI Reifegrad Analyse",
     ],
   };
 
-  // HowTo schema — "KI im KMU einführen"
+  // HowTo schema — "KI Unternehmensanalyse durchführen"
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "So führen Sie KI in Ihrem KMU ein: 5 Schritte",
+    name: "KI Unternehmensanalyse durchführen: So ermitteln Sie Ihren KI-Reifegrad",
     description:
-      "Schritt-für-Schritt-Anleitung zur erfolgreichen KI-Einführung im Mittelstand — von der Erstanalyse bis zur Skalierung.",
-    totalTime: "P30D",
+      "Schritt-für-Schritt-Anleitung zur kostenlosen KI Unternehmensanalyse auf ki-unternehmensanalyse.de — von der Dateneingabe bis zum personalisierten Ergebnis mit Handlungsempfehlungen.",
+    totalTime: "PT5M",
     estimatedCost: {
       "@type": "MonetaryAmount",
       currency: "EUR",
@@ -119,33 +121,27 @@ export default function RootLayout({
       {
         "@type": "HowToStep",
         position: 1,
-        name: "KI-Readiness Check durchführen",
-        text: "Starten Sie mit dem kostenlosen Online-Check. In 5 Minuten erhalten Sie Ihren KI-Reifegrad, eine Kategorieanalyse und erste Handlungsempfehlungen.",
+        name: "KI Unternehmensanalyse starten",
+        text: "Öffnen Sie ki-unternehmensanalyse.de und klicken Sie auf 'Jetzt KI-Analyse starten'. Der Fragebogen umfasst 10 kurze Abschnitte zu Ihrem Unternehmen, KI-Status, Prozessen und mehr.",
         url: `https://${siteConfig.domain}`,
       },
       {
         "@type": "HowToStep",
         position: 2,
-        name: "Quick Wins identifizieren",
-        text: "Basierend auf Ihrem Ergebnis identifizieren Sie die Bereiche mit dem größten Automatisierungspotenzial: E-Mail-Automatisierung, Chatbot, KI-gestützte Angebotserstellung.",
+        name: "Unternehmensdaten und KI-Status eingeben",
+        text: "Geben Sie grundlegende Informationen zu Ihrem Unternehmen ein: Branche, Größe, aktueller KI-Einsatz und Automatisierungsgrad. Der Fragebogen passt sich an Ihre Antworten an.",
       },
       {
         "@type": "HowToStep",
         position: 3,
-        name: "KI-Strategie entwickeln",
-        text: "Entwickeln Sie eine priorisierte KI-Roadmap mit klaren Meilensteinen. Definieren Sie Prozesse, Tools und benötigte Ressourcen.",
+        name: "KI-Reifegrad und Einsparpotenzial erhalten",
+        text: "Nach Abschluss berechnet der Algorithmus sofort Ihren KI-Reifegrad (0–100), aufgeschlüsselt nach sechs Kategorien, inklusive geschätztem Einsparpotenzial in Stunden und Euro.",
       },
       {
         "@type": "HowToStep",
         position: 4,
-        name: "Pilotprojekt umsetzen",
-        text: "Starten Sie mit einem klar abgegrenzten Pilotprojekt mit hohem Automatisierungspotenzial und messbarem Ergebnis.",
-      },
-      {
-        "@type": "HowToStep",
-        position: 5,
-        name: "Skalieren und optimieren",
-        text: "Rollen Sie die KI-Lösung auf weitere Geschäftsbereiche aus. Schulen Sie Ihr Team und messen Sie kontinuierlich den Impact.",
+        name: "Handlungsempfehlungen umsetzen",
+        text: "Nutzen Sie die konkreten Handlungsempfehlungen als KI-Roadmap. Optional buchen Sie ein kostenloses 30-Minuten-Strategiegespräch mit unseren KI-Experten.",
       },
     ],
   };
@@ -157,50 +153,34 @@ export default function RootLayout({
     mainEntity: [
       {
         "@type": "Question",
-        name: "Wie lange dauert der kostenlose KI-Check?",
+        name: "Was ist eine KI Unternehmensanalyse?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Der KI-Readiness Check umfasst 10 kurze Abschnitte und dauert in der Regel nur 5 Minuten. Sie erhalten Ihr Ergebnis mit konkretem KI-Reifegrad und Handlungsempfehlungen sofort nach Abschluss.",
+          text: "Eine KI Unternehmensanalyse ist eine systematische Bewertung des KI-Reifegrads eines Unternehmens. Sie untersucht in sechs Dimensionen, wie gut ein Unternehmen auf den Einsatz von Künstlicher Intelligenz vorbereitet ist — von der strategischen Verankerung über die Dateninfrastruktur bis hin zu Mitarbeiterkompetenzen und Budget. Das Ergebnis ist ein Score von 0 bis 100 mit konkreten Handlungsempfehlungen.",
         },
       },
       {
         "@type": "Question",
-        name: "Ist die KI Beratung wirklich kostenlos?",
+        name: "Was ist der Unterschied zwischen KI Unternehmensanalyse und KI Readiness Check?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ja, der KI-Readiness Check ist zu 100 % kostenlos und unverbindlich. Er dient als erster Schritt unserer KI Beratung für KMU: Sie erhalten eine fundierte Standortbestimmung, ohne versteckte Kosten.",
+          text: "Die Begriffe KI Unternehmensanalyse, KI Readiness Check und KI Reifegrad Analyse werden häufig synonym verwendet. Alle beschreiben eine strukturierte Bewertung der KI-Reife eines Unternehmens. Das Tool auf ki-unternehmensanalyse.de kombiniert alle drei Dimensionen: IST-Zustand-Analyse, Reifegrad-Bewertung und konkrete Handlungsempfehlungen.",
         },
       },
       {
         "@type": "Question",
-        name: "Was genau ist KI Beratung für KMU?",
+        name: "Ist die KI Unternehmensanalyse kostenlos?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "KI Beratung für KMU umfasst die strategische und operative Begleitung kleiner und mittelständischer Unternehmen bei der Einführung von Künstlicher Intelligenz — von der Analyse des IST-Zustands über die KI-Roadmap bis zur Implementierung.",
+          text: "Ja, die KI Unternehmensanalyse auf ki-unternehmensanalyse.de ist zu 100 % kostenlos und unverbindlich. Sie erhalten eine fundierte Standortbestimmung mit KI-Reifegrad, Einsparpotenzial und Handlungsempfehlungen — ohne versteckte Kosten.",
         },
       },
       {
         "@type": "Question",
-        name: "Für welche Branchen eignet sich der KI-Readiness Check?",
+        name: "Für welche Branchen eignet sich die KI Unternehmensanalyse?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Unser KI-Readiness Check ist branchenübergreifend konzipiert und eignet sich für alle Wirtschaftszweige: Handwerk, Produktion, Handel, Dienstleistung, IT, Gesundheitswesen, Finanzwesen, Logistik und mehr.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Was ist der Unterschied zwischen KI-Readiness Check und vollständiger KI Beratung?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Der KI-Readiness Check ist die kostenlose Erstanalyse in 5 Minuten. Die vollständige KI Beratung umfasst tiefgehende Prozessanalyse, individuelle KI-Strategie, Tool-Auswahl, Pilotprojekte und operative Begleitung.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Wer sieht meine Daten aus dem KI-Check?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben. Wir verwenden sie ausschließlich zur Erstellung Ihres persönlichen KI-Reifegrad-Ergebnisses.",
+          text: "Die KI Unternehmensanalyse ist branchenübergreifend konzipiert und eignet sich für alle Wirtschaftszweige: Handwerk, Produktion, Handel, Dienstleistung, IT, Gesundheitswesen, Finanzwesen, Logistik und mehr. Besonders geeignet für Unternehmen mit 10 bis 1.000 Mitarbeitenden.",
         },
       },
       {
@@ -208,31 +188,47 @@ export default function RootLayout({
         name: "Wie wird der KI-Reifegrad berechnet?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Der KI-Reifegrad basiert auf einem gewichteten Scoring-Modell über sechs Kernkategorien: KI-Einsatz, Prozessautomatisierung, Daten-Infrastruktur, digitale Sichtbarkeit, Mitarbeiterkompetenzen und Budget-Bereitschaft.",
+          text: "Der KI-Reifegrad basiert auf einem gewichteten Scoring-Modell über sechs Kernkategorien: KI-Einsatz & Strategie, Prozessautomatisierung, Daten & Infrastruktur, digitale Sichtbarkeit, Mitarbeiterkompetenzen und Budget-Bereitschaft. Jede Kategorie wird einzeln bewertet und zu einem Gesamtscore aggregiert.",
         },
       },
       {
         "@type": "Question",
-        name: "Was passiert nach dem KI-Readiness Check?",
+        name: "Was passiert nach der KI Unternehmensanalyse?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Sie erhalten sofort Ihren KI-Reifegrad-Score (0–100), Kategorieauswertung, geschätztes Einsparpotenzial und konkrete Handlungsempfehlungen. Optional können Sie ein kostenloses Strategiegespräch buchen.",
+          text: "Sie erhalten sofort Ihren KI-Reifegrad-Score (0–100), Kategorieauswertung, geschätztes Einsparpotenzial und konkrete Handlungsempfehlungen. Optional können Sie ein kostenloses 30-Minuten-Strategiegespräch mit den KI-Experten der track by track GmbH buchen.",
         },
       },
       {
         "@type": "Question",
-        name: "Wie kann ich als kleines Unternehmen mit KI starten?",
+        name: "Wer steckt hinter ki-unternehmensanalyse.de?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Der erste Schritt ist eine Bestandsaufnahme mit unserem KI-Readiness Check. Danach empfehlen wir ein klar abgegrenztes Pilotprojekt: z. B. Prozessautomatisierung, KI-Chatbot oder KI-gestützte Content-Erstellung.",
+          text: "Die KI Unternehmensanalyse wird von der track by track GmbH (famefact) betrieben. Geschäftsführer Tobias Gossmann berät seit über 10 Jahren mittelständische Unternehmen bei der digitalen Transformation und KI-Einführung.",
         },
       },
       {
         "@type": "Question",
-        name: "Bieten Sie auch KI Beratung vor Ort an?",
+        name: "Wie lange dauert die KI Unternehmensanalyse?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ja, neben der digitalen Erstanalyse bieten wir auch persönliche KI Beratung an — remote per Videocall oder vor Ort. Unser Standort ist Berlin, wir beraten aber bundesweit.",
+          text: "Die gesamte KI Unternehmensanalyse umfasst 10 kurze Abschnitte und dauert in der Regel nur 5 Minuten. Sie erhalten Ihr Ergebnis mit KI-Reifegrad und Handlungsempfehlungen sofort nach Abschluss.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Bieten Sie auch persönliche KI Beratung an?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Ja, neben der kostenlosen digitalen KI Unternehmensanalyse bieten wir auch persönliche KI Beratung an — remote per Videocall oder vor Ort. Unser Standort ist Berlin, wir beraten aber bundesweit.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Wer sieht meine Daten aus der KI Analyse?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben. Der Score wird direkt in Ihrem Browser berechnet. Kontaktdaten werden ausschließlich von unserem Beratungsteam verwendet.",
         },
       },
     ],

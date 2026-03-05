@@ -1,31 +1,33 @@
 export const siteConfig = {
-  domain: "bedarfsanalyse-ki.de",
-  siteName: "Bedarfsanalyse KI",
+  domain: "ki-unternehmensanalyse.de",
+  siteName: "KI Unternehmensanalyse",
   tagline:
-    "Finden Sie in 5 Minuten heraus, wo Ihr Unternehmen beim Einsatz von KI steht — mit unserer kostenlosen Bedarfsanalyse.",
+    "Finden Sie in 5 Minuten heraus, wo Ihr Unternehmen beim Einsatz von KI steht — mit unserer kostenlosen KI Unternehmensanalyse.",
   description:
-    "Kostenlose Bedarfsanalyse KI für Unternehmen. Ermitteln Sie Ihren KI-Reifegrad, identifizieren Sie Automatisierungspotenziale und erhalten Sie sofort umsetzbare Handlungsempfehlungen.",
+    "Kostenlose KI Unternehmensanalyse für den Mittelstand. Ermitteln Sie Ihren KI-Reifegrad, identifizieren Sie Automatisierungspotenziale und erhalten Sie sofort umsetzbare Handlungsempfehlungen.",
   niche: "general",
   nicheLabel: "Unternehmen",
   nicheDescription: "Entscheider, Geschäftsführer und Abteilungsleiter",
   seo: {
-    title: "Bedarfsanalyse KI | Kostenloser KI Readiness Check für Unternehmen",
+    title: "KI Unternehmensanalyse | Kostenloser KI-Readiness Check für Unternehmen",
     description:
-      "Kostenlose KI Bedarfsanalyse für Ihr Unternehmen. In 5 Minuten KI-Reifegrad ermitteln, Einsparpotenziale berechnen und konkrete Handlungsempfehlungen erhalten. Von Experten entwickelt.",
+      "Kostenlose KI Unternehmensanalyse: In 5 Minuten KI-Reifegrad ermitteln, Einsparpotenziale berechnen und konkrete Handlungsempfehlungen erhalten. Von KI-Experten entwickelt — speziell für den deutschen Mittelstand.",
     keywords: [
-      "Bedarfsanalyse KI",
-      "KI Bedarfsanalyse",
-      "KI Bedarfsanalyse Unternehmen",
+      "KI Unternehmensanalyse",
+      "KI Unternehmensanalyse kostenlos",
+      "KI Analyse Unternehmen",
       "KI Readiness Check",
-      "KI Reifegrad",
-      "KI Potenzialanalyse",
+      "KI Reifegrad Analyse",
+      "KI Potenzialanalyse Mittelstand",
+      "KI Bedarfsanalyse Unternehmen",
+      "Künstliche Intelligenz Unternehmensanalyse",
       "KI Status Quo Analyse",
-      "Künstliche Intelligenz Bedarfsermittlung",
       "KI Strategie Check",
       "KI Beratung Mittelstand",
       "KI Readiness",
       "Digitalisierung KI Test",
       "Prozessoptimierung KI",
+      "KI Reifegrad",
     ],
   },
   author: {
@@ -33,7 +35,7 @@ export const siteConfig = {
     role: "Geschäftsführer & KI-Stratege",
     company: "famefact | track by track GmbH",
     linkedin: "https://www.linkedin.com/in/tobias-famefact/",
-    bio: "Tobias Gossmann ist Geschäftsführer der track by track GmbH und Gründer von famefact — einer der führenden Agenturen für KI-gestützte Unternehmensprozesse in Deutschland. Mit über 10 Jahren Erfahrung in digitaler Transformation berät er mittelständische Unternehmen, Konzerne und öffentliche Einrichtungen bei der strategischen Einführung von Künstlicher Intelligenz.",
+    bio: "Tobias Gossmann ist Geschäftsführer der track by track GmbH und Gründer von famefact — einer der führenden Agenturen für KI-gestützte Unternehmensprozesse in Deutschland. Mit über 10 Jahren Erfahrung in digitaler Transformation berät er mittelständische Unternehmen, Konzerne und öffentliche Einrichtungen bei der strategischen Einführung von Künstlicher Intelligenz. Als Entwickler der KI Unternehmensanalyse auf ki-unternehmensanalyse.de verbindet er praxisnahe KI-Beratung mit datengetriebener Potenzialanalyse.",
   },
   colors: {
     primary: "#0D0D0D",
@@ -64,7 +66,7 @@ export const siteConfig = {
     ],
   },
   cta: {
-    primary: "Jetzt Bedarfsanalyse starten",
+    primary: "Jetzt KI-Analyse starten",
     calendly: "https://calendly.com/trackbytrack/ki-beratung",
   },
 };
