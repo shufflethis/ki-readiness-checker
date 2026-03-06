@@ -41,7 +41,7 @@ export default function RootLayout({
   const webAppSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "KI Unternehmensanalyse — Kostenloser KI-Readiness Check",
+    name: "KI Beratung KMU — Kostenloser KI-Readiness Check",
     description: siteConfig.description,
     url: `https://${siteConfig.domain}`,
     applicationCategory: "BusinessApplication",
@@ -93,7 +93,7 @@ export default function RootLayout({
     },
     knowsAbout: [
       "Künstliche Intelligenz",
-      "KI Unternehmensanalyse",
+      "KI Beratung KMU",
       "KI Beratung",
       "Digitale Transformation",
       "KI Strategie",
@@ -104,13 +104,13 @@ export default function RootLayout({
     ],
   };
 
-  // HowTo schema — "KI Unternehmensanalyse durchführen"
+  // HowTo schema — "KI Beratung KMU durchführen"
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "KI Unternehmensanalyse durchführen: So ermitteln Sie Ihren KI-Reifegrad",
+    name: "KI Beratung KMU durchführen: So ermitteln Sie Ihren KI-Reifegrad",
     description:
-      "Schritt-für-Schritt-Anleitung zur kostenlosen KI Unternehmensanalyse auf ki-unternehmensanalyse.de — von der Dateneingabe bis zum personalisierten Ergebnis mit Handlungsempfehlungen.",
+      "Schritt-für-Schritt-Anleitung zur kostenlosen KI Beratung KMU auf ki-beratung-kmu.de — von der Dateneingabe bis zum personalisierten Ergebnis mit Handlungsempfehlungen.",
     totalTime: "PT5M",
     estimatedCost: {
       "@type": "MonetaryAmount",
@@ -121,8 +121,8 @@ export default function RootLayout({
       {
         "@type": "HowToStep",
         position: 1,
-        name: "KI Unternehmensanalyse starten",
-        text: "Öffnen Sie ki-unternehmensanalyse.de und klicken Sie auf 'Jetzt KI-Analyse starten'. Der Fragebogen umfasst 10 kurze Abschnitte zu Ihrem Unternehmen, KI-Status, Prozessen und mehr.",
+        name: "KI Beratung KMU starten",
+        text: "Öffnen Sie ki-beratung-kmu.de und klicken Sie auf 'Jetzt KI-Analyse starten'. Der Fragebogen umfasst 10 kurze Abschnitte zu Ihrem Unternehmen, KI-Status, Prozessen und mehr.",
         url: `https://${siteConfig.domain}`,
       },
       {
@@ -153,34 +153,34 @@ export default function RootLayout({
     mainEntity: [
       {
         "@type": "Question",
-        name: "Was ist eine KI Unternehmensanalyse?",
+        name: "Was ist eine KI Beratung KMU?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Eine KI Unternehmensanalyse ist eine systematische Bewertung des KI-Reifegrads eines Unternehmens. Sie untersucht in sechs Dimensionen, wie gut ein Unternehmen auf den Einsatz von Künstlicher Intelligenz vorbereitet ist — von der strategischen Verankerung über die Dateninfrastruktur bis hin zu Mitarbeiterkompetenzen und Budget. Das Ergebnis ist ein Score von 0 bis 100 mit konkreten Handlungsempfehlungen.",
+          text: "Eine KI Beratung KMU ist eine systematische Bewertung des KI-Reifegrads eines Unternehmens. Sie untersucht in sechs Dimensionen, wie gut ein Unternehmen auf den Einsatz von Künstlicher Intelligenz vorbereitet ist — von der strategischen Verankerung über die Dateninfrastruktur bis hin zu Mitarbeiterkompetenzen und Budget. Das Ergebnis ist ein Score von 0 bis 100 mit konkreten Handlungsempfehlungen.",
         },
       },
       {
         "@type": "Question",
-        name: "Was ist der Unterschied zwischen KI Unternehmensanalyse und KI Readiness Check?",
+        name: "Was ist der Unterschied zwischen KI Beratung KMU und KI Readiness Check?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Die Begriffe KI Unternehmensanalyse, KI Readiness Check und KI Reifegrad Analyse werden häufig synonym verwendet. Alle beschreiben eine strukturierte Bewertung der KI-Reife eines Unternehmens. Das Tool auf ki-unternehmensanalyse.de kombiniert alle drei Dimensionen: IST-Zustand-Analyse, Reifegrad-Bewertung und konkrete Handlungsempfehlungen.",
+          text: "Die Begriffe KI Beratung KMU, KI Readiness Check und KI Reifegrad Analyse werden häufig synonym verwendet. Alle beschreiben eine strukturierte Bewertung der KI-Reife eines Unternehmens. Das Tool auf ki-beratung-kmu.de kombiniert alle drei Dimensionen: IST-Zustand-Analyse, Reifegrad-Bewertung und konkrete Handlungsempfehlungen.",
         },
       },
       {
         "@type": "Question",
-        name: "Ist die KI Unternehmensanalyse kostenlos?",
+        name: "Ist die KI Beratung KMU kostenlos?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ja, die KI Unternehmensanalyse auf ki-unternehmensanalyse.de ist zu 100 % kostenlos und unverbindlich. Sie erhalten eine fundierte Standortbestimmung mit KI-Reifegrad, Einsparpotenzial und Handlungsempfehlungen — ohne versteckte Kosten.",
+          text: "Ja, die KI Beratung KMU auf ki-beratung-kmu.de ist zu 100 % kostenlos und unverbindlich. Sie erhalten eine fundierte Standortbestimmung mit KI-Reifegrad, Einsparpotenzial und Handlungsempfehlungen — ohne versteckte Kosten.",
         },
       },
       {
         "@type": "Question",
-        name: "Für welche Branchen eignet sich die KI Unternehmensanalyse?",
+        name: "Für welche Branchen eignet sich die KI Beratung KMU?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Die KI Unternehmensanalyse ist branchenübergreifend konzipiert und eignet sich für alle Wirtschaftszweige: Handwerk, Produktion, Handel, Dienstleistung, IT, Gesundheitswesen, Finanzwesen, Logistik und mehr. Besonders geeignet für Unternehmen mit 10 bis 1.000 Mitarbeitenden.",
+          text: "Die KI Beratung KMU ist branchenübergreifend konzipiert und eignet sich für alle Wirtschaftszweige: Handwerk, Produktion, Handel, Dienstleistung, IT, Gesundheitswesen, Finanzwesen, Logistik und mehr. Besonders geeignet für Unternehmen mit 10 bis 1.000 Mitarbeitenden.",
         },
       },
       {
@@ -193,7 +193,7 @@ export default function RootLayout({
       },
       {
         "@type": "Question",
-        name: "Was passiert nach der KI Unternehmensanalyse?",
+        name: "Was passiert nach der KI Beratung KMU?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Sie erhalten sofort Ihren KI-Reifegrad-Score (0–100), Kategorieauswertung, geschätztes Einsparpotenzial und konkrete Handlungsempfehlungen. Optional können Sie ein kostenloses 30-Minuten-Strategiegespräch mit den KI-Experten der track by track GmbH buchen.",
@@ -201,18 +201,18 @@ export default function RootLayout({
       },
       {
         "@type": "Question",
-        name: "Wer steckt hinter ki-unternehmensanalyse.de?",
+        name: "Wer steckt hinter ki-beratung-kmu.de?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Die KI Unternehmensanalyse wird von der track by track GmbH (famefact) betrieben. Geschäftsführer Tobias Sander berät seit über 10 Jahren mittelständische Unternehmen bei der digitalen Transformation und KI-Einführung.",
+          text: "Die KI Beratung KMU wird von der track by track GmbH (famefact) betrieben. Geschäftsführer Tobias Sander berät seit über 10 Jahren mittelständische Unternehmen bei der digitalen Transformation und KI-Einführung.",
         },
       },
       {
         "@type": "Question",
-        name: "Wie lange dauert die KI Unternehmensanalyse?",
+        name: "Wie lange dauert die KI Beratung KMU?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Die gesamte KI Unternehmensanalyse umfasst 10 kurze Abschnitte und dauert in der Regel nur 5 Minuten. Sie erhalten Ihr Ergebnis mit KI-Reifegrad und Handlungsempfehlungen sofort nach Abschluss.",
+          text: "Die gesamte KI Beratung KMU umfasst 10 kurze Abschnitte und dauert in der Regel nur 5 Minuten. Sie erhalten Ihr Ergebnis mit KI-Reifegrad und Handlungsempfehlungen sofort nach Abschluss.",
         },
       },
       {
@@ -220,7 +220,7 @@ export default function RootLayout({
         name: "Bieten Sie auch persönliche KI Beratung an?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ja, neben der kostenlosen digitalen KI Unternehmensanalyse bieten wir auch persönliche KI Beratung an — remote per Videocall oder vor Ort. Unser Standort ist Berlin, wir beraten aber bundesweit.",
+          text: "Ja, neben der kostenlosen digitalen KI Beratung KMU bieten wir auch persönliche KI Beratung an — remote per Videocall oder vor Ort. Unser Standort ist Berlin, wir beraten aber bundesweit.",
         },
       },
       {
